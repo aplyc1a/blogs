@@ -12,4 +12,4 @@
 
 ## Windows入侵痕迹取证
 
-\[1] [Windows 入侵痕迹取证-3](./Windows取证.md)
+\[1] [Windows 入侵痕迹取证](./Windows取证.md)
