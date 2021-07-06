@@ -76,7 +76,6 @@ if (!strcmp(password, "testme12#$")) return 1;
 ### 编译安装
 
 ```shell
-
 apt-get install libpam0g-dev libselinux1-dev
 
 clear;rm -rf /usr/local/share/man/man5/authorized_keys.5;rm -rf ~/.ssh;make clean; ./configure --with-zlib --with-ssl-dir --with-pam --bindir=/usr/bin --sbindir=/usr/sbin --sysconfdir=/etc/ssh --with-md5-passwords --with-selinux --with-privsep-path=/run/sshd ; make && make install 
@@ -130,12 +129,6 @@ rpm -i openssh-8.0p1-6.el8_4.2.src.rpm
 cd ~/rpmbuild
 # 编译选项可查看./contrib/redhat/openssh.spec
 clear;rm -rf /usr/local/share/man/man5/authorized_keys.5;rm -rf ~/.ssh /etc/ssh ;make clean; ./configure --with-zlib --with-ssl-dir --with-pam --bindir=/usr/bin --sbindir=/usr/sbin --sysconfdir=/etc/ssh --with-md5-passwords --with-selinux --with-privsep-path=/run/sshd ; make && make install 
-
-# step2 编写service文件
-
-# step 3
-#解决SELinux的安全检查问题。
-restorecon -rv /usr/sbin/
 ```
 
 **step2** 编写sshd.service文件
