@@ -2,7 +2,7 @@
 
 安全笔记。构建我个人的网络安全知识框架。不断扩充中...
 
-
+菜鸡在路上...
 
 ## 攻击隐藏
 
@@ -34,7 +34,7 @@
 
 ### [+] 免杀
 
-\[1] [基本二进制免杀](https://github.com/aplyc1a/blogs/blob/master/免杀/二进制免杀技术研究.md)
+\[1] [基本二进制免杀](https://github.com/aplyc1a/blogs/blob/master/免杀与躲避/免杀/二进制免杀技术研究.md)
 
 ### [+] 躲避取证
 
@@ -48,7 +48,7 @@
 
 \[2] [sudo提权](https://github.com/aplyc1a/blogs/blob/master/权限提升/Linux提权/配置不当提权/sudo.md)
 
-\[3] [shell脚本定时任务提权](https://github.com/aplyc1a/blogs/blob/master/权限提升/Linux提权/配置不当提权/脚本定时任务提权.md)
+\[3] [shell脚本定时任务提权](https://github.com/aplyc1a/blogs/blob/master/权限提升/Linux提权/配置不当提权/shell脚本定时任务提权.md)
 
 \[4] [shell脚本调用权限继承提权](https://github.com/aplyc1a/blogs/blob/master/权限提升/Linux提权/配置不当提权/shell脚本调用权限继承提权.md)
 
@@ -68,7 +68,7 @@
 
 ### [+] 信息与数据搜集
 
-\[1] [软链接提权](https://github.com/aplyc1a/blogs/blob/master/内网安全与后渗透/getshell后的基本信息收集.md)
+\[1] [getshell后的基本信息收集](https://github.com/aplyc1a/blogs/blob/master/内网安全与后渗透/getshell后的基本信息收集.md)
 
 \[2] [敏感数据搜集](https://github.com/aplyc1a/blogs/blob/master/内网安全与后渗透/敏感数据搜集.md)
 
