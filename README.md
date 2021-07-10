@@ -1,8 +1,6 @@
 # SecNote
 
-安全笔记。构建我个人的网络安全知识框架。
-
-菜鸡在路上...
+安全笔记。构建我个人的网络安全知识框架。不断扩充中...
 
 
 
@@ -102,11 +100,11 @@
 
 #### [++] 挖矿
 
-\[1] [门罗挖矿技术研究](https://github.com/aplyc1a/blogs/blob/master/Linux/monero挖矿研究.md)
+\[1] [门罗挖矿技术研究](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/monero挖矿研究.md)
 
 #### [++] 后门
 
-\[2] [自己制作OpenSSH源码编译后门](https://github.com/aplyc1a/blogs/blob/master/Linux/定制化OpenSSH后门.md)
+\[2] [自己制作OpenSSH源码编译后门](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/定制化OpenSSH后门.md)
 
 #### [++] 勒索
 
@@ -126,8 +124,8 @@
 
 ### [+] 反审查
 
-\[1]  [匿名与反审查技术](https://github.com/aplyc1a/blogs/blob/master/审查对抗/反审查技术.md)
+\[1]  [匿名与反审查技术](https://github.com/aplyc1a/blogs/blob/master/审查对抗/反审查技术/反审查技术.md)
 
-\[2]  [隐写术](https://github.com/aplyc1a/blogs/blob/master/审查对抗/隐写术.md)
+\[2]  [隐写术](https://github.com/aplyc1a/blogs/blob/master/审查对抗/反审查技术/隐写术.md)
 
 ### [+] 司法审查
