@@ -102,13 +102,25 @@
 
 \[2] [经典的后门账户添加姿势](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-后门账户.md)
 
-\[3] [不再烂大街的计划任务后门](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-计划任务后门.md)
+\[3] [过时的SSHWrapper](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-SSHWrapper后门.md)
 
-\[4] [不再烂大街的SSH软链接后门](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-SSH软链接后门)
+\[4] [过时的(x)inetd后门](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-(x)inetd后门.md)
 
-\[5] [别名后门新姿势](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-各种别名后门.md)
+\[5] [鸡肋的PROMPT_COMMAND后门](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-PROMPT_COMMAND后门.md)
 
-\[6] [自己制作OpenSSH源码编译后门](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/定制化OpenSSH后门.md)
+\[6] [不再烂大街的计划任务后门](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-计划任务后门.md)
+
+\[7] [不再烂大街的SSH软链接后门](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-SSH软链接后门)
+
+\[8] [别名后门新姿势](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-各种别名后门.md)
+
+\[9] [自己制作OpenSSH源码编译后门](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/定制化OpenSSH后门.md)
+
+\[10] [PAM后门制作](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-PAM后门制作.md)
+
+\[11] [systemd后门](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-systemd服务后门.md)
+
+\[12] [Linux-fake命令偷密码](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-fake命令偷密码.md)
 
 #### 1.3 勒索
 
