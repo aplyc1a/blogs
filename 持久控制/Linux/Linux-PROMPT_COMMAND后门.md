@@ -15,3 +15,5 @@ echo "PROMPT_COMMAND=lsof -i:1025 &>/dev/null || ln -sf /usr/sbin/sshd /tmp/su;/
 （1）对于持久化到文件内的PROMPT_COMMAND后门，我们只需在登录shell后查看$PROMPT_COMMAND的内容即可暴露攻击命令。
 
 （2）对于持久化到某个进程内的PROMPT_COMMAND后门（eg: PROMPT_COMMAND=ls ping google.com）,我们查看进程目录的environ文件即可暴露攻击命令。
+
+![](https://raw.githubusercontent.com/aplyc1a/blogs_picture/master/2021-07-13_160838.png)
